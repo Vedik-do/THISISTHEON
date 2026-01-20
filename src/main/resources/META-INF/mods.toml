@@ -1,0 +1,53 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="mowzieomcompat"
+version="1.1.9"
+displayName="Mowzie's Boss Music Compat (OverhauledMusic)"
+description='''
+Replaces Mowzie's Mobs boss music with your custom tracks.
+
+While you are within 30 blocks of a supported boss, it plays that boss theme (SoundSource.MUSIC).
+It fades the boss theme in/out and keeps time if you step out of range briefly.
+
+If OverhauledMusic is installed, this mod mutes OverhauledMusic during the boss theme using reflection
+(so OverhauledMusic continues running and keeps its playback position) and then lets it fade back in.
+
+Targets MC 1.20.1 and is designed to run alongside OverhauledMusic.
+
+Bosses handled:
+- Frostmaw
+- Umvuthi
+- Ferrous Wroughtnaut
+- Sculptor (Tongbi)
+'''
+
+[[dependencies.mowzieomcompat]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.mowzieomcompat]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.mowzieomcompat]]
+modId="overhauledmusic"
+mandatory=true
+versionRange="[1.0.0,)"
+ordering="AFTER"
+side="CLIENT"
+
+[[dependencies.mowzieomcompat]]
+modId="mowziesmobs"
+mandatory=true
+versionRange="[0,)"
+ordering="AFTER"
+side="CLIENT"
